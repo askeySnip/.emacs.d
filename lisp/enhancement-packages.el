@@ -2,6 +2,8 @@
 ;;; Commentary
 ;;; Code:
 
+(use-package fullframe
+  :ensure t)
 
 (use-package which-key
   :ensure t

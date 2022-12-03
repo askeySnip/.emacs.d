@@ -64,6 +64,7 @@
 
 (use-package magit
   :ensure t)
+(fullframe magit-status magit-mode-quit-window)
 
 (use-package c++-mode
   :functions 			; suppress warnings
