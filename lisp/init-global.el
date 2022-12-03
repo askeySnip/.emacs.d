@@ -30,7 +30,21 @@
 (savehist-mode 1)                            ; （可选）打开 Buffer 历史记录保存
 (setq display-line-numbers-type 'relative)   ; （可选）显示相对行号
 
+;; enable recent file with M-x recent-file-open 
+(recentf-mode 1)
 
+;; enable save-history M-n/M-p 
+(setq history-length 25)
+(savehist-mode 1)
+
+;; enable for open file with the same cursor postion
+(save-place-mode 1)
+
+;; Revert buffers when the underlying file has  changed
+(global-auto-revert-mode 1)
+
+;; Revert Dired and other buffers
+(setq global-auto-revert-non-file-buffers 1)
 
 (global-set-key (kbd "C-j") nil)
 ;; 删去光标所在行（在图形界面时可以用 "C-S-<DEL>"，终端常会拦截这个按法)
