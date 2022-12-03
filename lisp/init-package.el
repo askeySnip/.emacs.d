@@ -32,8 +32,13 @@
 (add-to-list 'package-archives '("melpa" . "http://mirrors.bfsu.edu.cn/elpa/melpa/") t)
 (package-initialize)
 
+;; Initialize use-package on non-linux platforms
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
 (eval-when-compile
   (require 'use-package))
+(setq use-package-always-ensure t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
