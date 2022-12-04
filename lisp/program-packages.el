@@ -66,7 +66,7 @@
   :ensure t)
 (fullframe magit-status magit-mode-quit-window)
 
-(use-package c++-mode
+(use-package cc-mode
   :functions 			; suppress warnings
   c-toggle-hungry-state
   :hook
