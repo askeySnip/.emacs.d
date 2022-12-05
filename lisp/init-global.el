@@ -19,6 +19,14 @@
 (set-fringe-mode 10)
 (menu-bar-mode -1)
 
+;; disable line numbers for some modes
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+                shell-mode-hook
+                eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
+
 ;; Set up the visible bell
 (setq visible-bell t)
 
